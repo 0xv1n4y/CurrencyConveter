@@ -1,8 +1,11 @@
-# React + Vite
+Currency Converter Website using ReactJS and Material-UI
+This is a simple currency converter web application built using ReactJS and styled with Material-UI. It allows users to convert currency values from one currency to another, providing a user-friendly interface with a modern design.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LiveAt : "https://splendid-bonbon-61a431.netlify.app/"
 
-Currently, two official plugins are available:
+Features
+Currency Conversion: Users can select source and target currencies and enter the amount they want to convert. The app provides real-time conversion rates using a currency exchange API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dynamic User Interface: The application features a dynamic and responsive user interface, thanks to the use of ReactJS. It adapts to various screen sizes and provides an optimal user experience.
+
+Material-UI Styling: The application is styled using Material-UI components, offering a clean and visually appealing design. Material-UI provides a set of pre-designed React components that enhance the overall look and feel of the application.
