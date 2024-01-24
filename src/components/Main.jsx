@@ -167,12 +167,12 @@ const Main = () => {
   const convert = () => {
     setConvertedAmount(amount * data[to]);
   };
-  const swap = () => {
-    setFrom(to);
-    setTo(from);
-    setAmount(convertedAmount);
-    setConvertedAmount(amount);
-  };
+  // const swap = () => {
+  //   setFrom(to);
+  //   setTo(from);
+  //   // setAmount(convertedAmount);
+  //   // setConvertedAmount(amount);
+  // };
   const submitHandler = (e) => {
     e.preventDefault();
     convert();
@@ -214,7 +214,7 @@ const Main = () => {
           </TopContainer>
         </Top>
         <Middle>
-          <Button onClick={(e) => swap(e.target.value)}>Swap</Button>
+          {/* <Button onClick={(e) => swap(e.target.value)}>Swap</Button> */}
           <Button onClick={reload}>Reload</Button>
         </Middle>
         <Bottom>
