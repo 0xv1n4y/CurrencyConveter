@@ -4,8 +4,6 @@ Currency Converter Website using ReactJS and Material-UI
  # This is a simple currency converter web application built using ReactJS and styled with Material-UI. It allows users to convert currency values from one currency to 
    another, providing a user-friendly interface with a modern design.
 
- # LiveAt : "https://splendid-bonbon-61a431.netlify.app/"
-
  # Features
    Currency Conversion: Users can select source and target currencies and enter the amount they want to convert. The app provides real-time conversion rates using a 
    currency exchange API.
