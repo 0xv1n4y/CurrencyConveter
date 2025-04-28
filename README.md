@@ -17,110 +17,108 @@ Currency Converter Website using ReactJS and Material-UI
 
 # \ud83d\udce6 Mini Web Application
 
-## Overview
-
-This mini project consists of two main tasks combined into a single responsive web application:
-
-1. **Products Price List**  
-2. **Terms Page Clone** (from [https://online.123fakturera.se/terms/](https://online.123fakturera.se/terms/))
-
-The application is fully responsive and optimized for Desktop, Laptop, Tablet, and Mobile devices.
+# 📄 Mini App - Price List & Terms Page Clone
 
 ---
 
-## \ud83d\udd39 Task 1: Products Price List
+## 📋 Project Overview
 
-In the **Products Price List** section, I built a web application based on the provided UI designs. Here are the main features:
+This mini app contains two main functionalities based on the provided SOW:
 
-- **Header with Hamburger Menu and Drawer**  
-- **Product List with Test Data** (20 items)
-- **Smooth Scrolling** inside the products list
-- **Edit Functionality** via Ellipsis Icon
-- **Save/Cancel Buttons** after editing
-- **Search Filters** for Article No and Product Name
-- **Responsive Columns** based on device size (Desktop, Tablet, Mobile)
+1. **Products Price List**: A responsive web page showing a price list of 20 test products.
+2. **Terms Page Clone**: A responsive clone of https://online.123fakturera.se/terms/ with full language support (English and Svenska).
+
+Both modules are fully responsive across desktop, tablet, and mobile devices.
 
 ---
 
-## \ud83d\udd39 Task 2: Terms Page Clone
+## 🚀 Tech Stack
 
-Inside the drawer, a **"Terms"** menu item is available:
-
-- Navigate to the cloned **Terms** page.
-- **Language Switcher** in the header (English \ud83c\uddec\ud83c\udde7 and Svenska \ud83c\uddf8\ud83c\uddea)
-- Language data pulled from PostgreSQL database
-- Smooth scrolling and mobile-first responsive layout
-
----
-
-## \u2699\ufe0f Tech Stack
-
-### Frontend:
-- **Vite.js** + **React.js** (v19.0.0)
-- **Tailwind CSS** (v4.1.4) \u2014 for modern responsive styling
-- **Lucide React Icons** (v0.503.0) \u2014 lightweight icon set
-- **React Router DOM** (v7.5.2) \u2014 for page routing
-- **Axios** (v1.9.0) \u2014 for API calls
-
-### Backend:
-- **Node.js** \u2014 JavaScript runtime
-- **Fastify** (v5.3.2) \u2014 Fast backend framework
-- **Fastify CORS** (v11.0.1) \u2014 Cross-Origin Resource Sharing
-- **Fastify Helmet** (v13.0.1) \u2014 Security headers
-- **Sequelize ORM** (v6.37.7) \u2014 for database models
-- **PostgreSQL** \u2014 for storing data
+- **Frontend**: Vite + React.js
+- **Styling**: Tailwind CSS
+- **Routing**: React Router DOM
+- **Icons**: Lucide React Icons
+- **API Communication**: Axios
+- **Backend**: Node.js + Fastify
+- **Database**: PostgreSQL
+- **ORM**: Sequelize
+- **Environment Variables Management**: dotenv
 
 ---
 
-## \ud83d\udee0\ufe0f Project Setup Instructions
+## 🎨 Frontend Features
 
-Follow these steps to run the project locally:
+- Responsive header with hamburger menu (Drawer functionality).
+- Smooth scrolling behavior across all devices.
+- Search functionality by "Article No" and "Product" fields.
+- Editable product list rows with Save and Cancel options.
+- Dynamic responsiveness for Desktop, Tablet, and Mobile devices.
+- Routing between Price List and Terms pages.
+- Language switcher with English and Svenska support (data pulled from DB).
 
-### 1. Clone the repository
-```bash
-git clone <repository-url>
-cd <project-folder>
+### 📁 Frontend Project Structure
+
+```plaintext
+frontend/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── utils/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
 ```
 
-### 2. Install Frontend Dependencies
-```bash
-cd frontend
-npm install
+---
+
+## 🛠️ Backend Features
+
+- Fastify server setup on port `3004`.
+- REST APIs to fetch and update Products and Terms data.
+- Database integration using PostgreSQL.
+- Sequelize ORM for model management.
+- Environment variable management via `.env`.
+- CORS enabled with security headers using `@fastify/helmet`.
+
+### 📁 Backend Project Structure
+
+```plaintext
+backend/
+├── config/
+│   └── db.js
+├── models/
+│   ├── index.js
+│   ├── product.model.js
+│   └── terms.model.js
+├── routes/
+│   ├── product.routes.js
+│   └── terms.routes.js
+├── .env
+├── package.json
+├── server.js
+└── README.md
 ```
 
-### 3. Install Backend Dependencies
-```bash
-cd backend
-npm install
-```
+### 🌍 .env Example
 
-### 4. Environment Variables
-
-Create a `.env` file inside the **backend** folder with necessary database credentials:
 ```bash
+PORT=3004
 DB_HOST=localhost
-DB_USER=your_user
-DB_PASSWORD=your_password
+DB_USER=your_db_username
+DB_PASSWORD=your_db_password
 DB_NAME=your_db_name
 DB_PORT=5432
 ```
 
-### 5. Run Backend Server
-```bash
-npm run dev
-```
-
-### 6. Run Frontend Development Server
-```bash
-npm run dev
-```
-
-- Frontend: [http://localhost:5173](http://localhost:5173)  
-- Backend: [http://localhost:3000](http://localhost:3000)
-
 ---
 
-## \ud83d\udce6 Frontend Dependencies
+## 📦 Frontend Dependencies
 
 | Package              | Version     | Purpose                                   |
 |----------------------|-------------|-------------------------------------------|
@@ -132,7 +130,8 @@ npm run dev
 | @tailwindcss/vite    | ^4.1.4      | Tailwind integration with Vite           |
 | lucide-react         | ^0.503.0    | Lightweight icons for React              |
 
-### Frontend Dev Dependencies:
+### 📦 Frontend Dev Dependencies
+
 | Package                  | Version     |
 |---------------------------|-------------|
 | vite                      | ^6.3.1       |
@@ -146,7 +145,7 @@ npm run dev
 
 ---
 
-## \ud83d\udce6 Backend Dependencies
+## 📦 Backend Dependencies
 
 | Package              | Version     | Purpose                                |
 |----------------------|-------------|----------------------------------------|
@@ -159,74 +158,61 @@ npm run dev
 | pg-hstore            | ^2.3.4      | PostgreSQL hstore support              |
 | dotenv               | ^16.5.0     | Manage environment variables           |
 
-### Backend Dev Dependencies:
+### 📦 Backend Dev Dependencies
+
 | Package              | Version     |
 |----------------------|-------------|
 | nodemon              | ^3.1.10     |
 
 ---
 
-## \ud83d\udcc1 Folder Structure
+## 📂 How to Run Locally
 
-```
-project-folder/
-│
-├── frontend/              # Vite + React App
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── routes/
-│   │   └── App.jsx
-│   ├── package.json
-│   └── tailwind.config.js
-│
-├── backend/               # Fastify Server + Sequelize ORM
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
-│   └── package.json
-│
-└── README.md
+### Backend Setup:
+
+```bash
+cd backend
+npm install
+npm run dev
 ```
 
----
+The server will start on `http://localhost:3004`
 
-## \u2728 Key Highlights
-- Responsive Drawer and Hamburger Menu
-- Editable Products Table with Save/Cancel
-- Search Functionality by Article No and Product
-- Dynamic Columns based on screen size
-- Language switcher with DB-driven translations
-- Fully mobile-first responsive UI
-- Backend API secured with Helmet and CORS policies
+### Frontend Setup:
 
----
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## \ud83d\udce2 Notes
-- The application uses PostgreSQL as the main database.
-- All user edits are dynamically saved to the database.
-- Both frontend and backend use latest stable dependency versions.
+The app will start on `http://localhost:5173` (default Vite port)
 
 ---
 
-## \ud83d\udcda License
+## 📝 Important Notes
 
-This project was developed as part of a skill test SOW (Statement of Work) and is intended for demonstration purposes only.
-
----
-
-# \u2705 Project Status: Completed
+- Ensure PostgreSQL is running and database credentials are correctly added in `.env`.
+- You must create the necessary tables (Products and Terms) beforehand or through Sequelize syncing.
+- Adjust CORS settings if your frontend and backend are hosted on different origins.
 
 ---
 
-# \ud83d\udce9 Final Tip
-- Always remember to secure environment variables before deploying live \ud83d\ude80.
-- Make sure CORS is correctly configured if frontend and backend are hosted separately.
+## ✅ Final Deliverables
+
+- Hosted demo link
+- GitHub repository link with clean code
+- README.md with setup instructions (this document)
 
 ---
 
-# Thank you! \ud83d\ude4c
+## 📞 Contact
+
+For any questions or clarifications, feel free to reach out!
+
+---
+
+
 
 
 
